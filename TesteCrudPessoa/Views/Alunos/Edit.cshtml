@@ -1,0 +1,29 @@
+﻿@model TesteCrudPessoa.Models.ViewModels.AlunosFormViewModel
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h4>Aluno</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="Aluno.Id" />
+            <div class="form-group">
+                <label asp-for="Aluno.Nome" class="control-label"></label>
+                <input asp-for="Aluno.Nome" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Aluno.DataNasc" class="control-label"></label>
+                <input asp-for="Aluno.DataNasc" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
